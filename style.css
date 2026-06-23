@@ -24,13 +24,19 @@ nav {
   z-index: 200;
 }
 
+.nav-icons {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.nav-camera,
 .nav-info {
   text-decoration: none;
   color: #7a7570;
   font-size: 1.1rem;
   font-family: 'Jost', sans-serif;
   font-weight: 200;
-  letter-spacing: 0.05em;
   width: 28px;
   height: 28px;
   border: 1px solid #3a3530;
@@ -41,10 +47,12 @@ nav {
   transition: color 0.3s ease, border-color 0.3s ease;
 }
 
+.nav-camera:hover,
 .nav-info:hover {
   color: #d4cfc9;
   border-color: #7a7570;
 }
+
 
 /* ── Home page ── */
 .home-header {
