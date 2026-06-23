@@ -9,7 +9,7 @@
 body {
   background-color: #141414;
   color: #d4cfc9;
-  font-family: 'Jost', -apple-system, 'Avenir Next', 'Avenir', sans-serif;
+  font-family: 'Shippori Mincho', serif;: 'Shippori Mincho', serif;ly: 'Shippori Mincho', serif;
   font-weight: 300;
 }
 
@@ -35,7 +35,7 @@ nav {
   text-decoration: none;
   color: #7a7570;
   font-size: 1.1rem;
-  font-family: 'Jost', sans-serif;
+  font-family: 'Shippori Mincho', serif;
   font-weight: 200;
   width: 28px;
   height: 28px;
@@ -81,7 +81,7 @@ nav {
 
 .home-header p {
   margin-top: 0.6rem;
-  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-family: 'Cormorant Garamond', Georgia, serif
   font-style: italic;
   font-size: clamp(1.4rem, 2vw, 1.6rem);
   letter-spacing: 0.15em;
@@ -128,7 +128,7 @@ nav {
   position: absolute;
   bottom: 3rem;
   left: 3rem;
-  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-family: 'Shippori Mincho', serif;
   font-size: clamp(1.4rem, 2.5vw, 2.2rem);
   font-weight: 300;
   letter-spacing: 0.2em;
@@ -231,7 +231,7 @@ nav {
   color: #7a7570;
   cursor: pointer;
   font-weight: 200;
-  font-family: 'Jost', sans-serif;
+  font-family: 'Shippori Mincho', serif;
   letter-spacing: 0.05em;
   transition: color 0.3s ease;
 }
@@ -248,7 +248,7 @@ nav {
 }
 
 .about-page h1 {
-  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-family: 'Shippori Mincho', serif;
   font-size: 1.8rem;
   font-weight: 300;
   letter-spacing: 0.2em;
@@ -258,7 +258,7 @@ nav {
 }
 
 .about-page h2 {
-  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-family: 'Shippori Mincho', serif;
   font-size: 1.1rem;
   font-weight: 300;
   letter-spacing: 0.2em;
