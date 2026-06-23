@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Jost:wght@200;300;400&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
+  color: #d4cfc9;
+  font-family: 'Jost', -apple-system, 'Avenir Next', 'Avenir', sans-serif;
+  font-weight: 300;
+}
+
+/* ── Navigation ── */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding: 1.8rem 2.5rem;
+  z-index: 200;
+}
+
+.nav-info {
+  text-decoration: none;
+  color: #7a7570;
+  font-size: 1.1rem;
+  font-family: 'Jost', sans-serif;
+  font-weight: 200;
+  letter-spacing: 0.05em;
+  width: 28px;
+  height: 28px;
+  border: 1px solid #3a3530;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.nav-info:hover {
+  color: #d4cfc9;
+  border-color: #7a7570;
+}
+
+/* ── Home page ── */
+.home-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  padding: 3.5rem 0 0;
+  text-align: center;
+  pointer-events: none;
+}
+
+.home-header h1 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(1.6rem, 3vw, 2.8rem);
+  font-weight: 300;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #e8e3dc;
+}
+
+.home-header p {
+  margin-top: 0.6rem;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-style: italic;
+  font-size: clamp(0.8rem, 1.2vw, 1rem);
+  letter-spacing: 0.15em;
+  color: #5a5550;
+}
+
+/* ── Home collections grid ── */
+.home-collections {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100vh;
+}
+
+.collection-link {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  text-decoration: none;
+}
+
+.collection-link img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: brightness(0.55);
+  transition: filter 0.6s ease, transform 0.6s ease;
+}
+
+.collection-link:hover img {
+  filter: brightness(0.75);
+  transform: scale(1.03);
+}
+
+.collection-title {
+  position: absolute;
+  bottom: 3rem;
+  left: 3rem;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(1.4rem, 2.5vw, 2.2rem);
+  font-weight: 300;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #e8e3dc;
+  border-bottom: 1px solid rgba(212, 207, 201, 0.4);
+  padding-bottom: 0.4rem;
+  transition: border-color 0.3s ease;
+}
+
+.collection-link:hover .collection-title {
+  border-color: rgba(212, 207, 201, 0.9);
+}
+
+/* ── Collection page header ── */
+.collection-header {
+  padding: 5rem 3rem 2rem;
+  text-align: center;
+  border-bottom: 1px solid #111;
+}
+
+.collection-header h1 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(1.4rem, 2.5vw, 2.2rem);
+  font-weight: 300;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #e8e3dc;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 1rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #5a5550;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.back-link:hover {
+  color: #d4cfc9;
+}
+
+/* ── Gallery grid ── */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3px;
+  padding: 3px;
+  background-color: #000;
+}
+
+.gallery img {
+  width: 100%;
+  aspect-ratio: 2/3;
+  object-fit: cover;
+  display: block;
+  cursor: pointer;
+  filter: brightness(0.92);
+  transition: filter 0.3s ease;
+}
+
+.gallery img:hover {
+  filter: brightness(1);
+}
+
+/* ── Lightbox ── */
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.95);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.lightbox.open {
+  display: flex;
+}
+
+.lightbox img {
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+  cursor: default;
+}
+
+.lightbox-close {
+  position: fixed;
+  top: 1.5rem;
+  right: 2rem;
+  font-size: 1.5rem;
+  color: #7a7570;
+  cursor: pointer;
+  font-weight: 200;
+  font-family: 'Jost', sans-serif;
+  letter-spacing: 0.05em;
+  transition: color 0.3s ease;
+}
+
+.lightbox-close:hover {
+  color: #e8e3dc;
+}
+
+/* ── About page ── */
+.about-page {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 8rem 2rem 6rem;
+}
+
+.about-page h1 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.8rem;
+  font-weight: 300;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #e8e3dc;
+  margin-bottom: 3rem;
+}
+
+.about-page h2 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.1rem;
+  font-weight: 300;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #7a7570;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+.about-page p {
+  font-size: 0.9rem;
+  line-height: 1.9;
+  color: #9a9590;
+  letter-spacing: 0.03em;
+}
+
+.about-page a {
+  color: #d4cfc9;
+  text-decoration: none;
+  border-bottom: 1px solid #3a3530;
+  transition: border-color 0.3s ease;
+}
+
+.about-page a:hover {
+  border-color: #7a7570;
+}
+
+/* ── Footer ── */
+footer {
+  padding: 2rem 3rem;
+  text-align: center;
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  color: #3a3530;
+  text-transform: uppercase;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .home-collections {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+
+  .collection-link {
+    height: 50vh;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  nav {
+    padding: 1.2rem 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+}
