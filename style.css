@@ -235,6 +235,7 @@ nav {
   max-width: 680px;
   margin: 0 auto;
   padding: 8rem 2rem 6rem;
+  overflow: hidden;
 }
 
 .about-page h1 {
