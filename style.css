@@ -83,14 +83,14 @@ nav {
   margin-top: 0.6rem;
   font-family: 'Cormorant Garamond', Georgia, serif;
   font-style: italic;
-  font-size: clamp(0.8rem, 1.2vw, 1rem);
+  font-size: clamp(1rem, 1.8vw, 1.4rem);
   letter-spacing: 0.15em;
   color: #a09a93;
 }
 
 .home-divider {
   display: block;
-  width: 140px;
+  width: 240px;
   height: 1px;
   margin: 0.8rem auto;
   background: radial-gradient(ellipse at center, #6a6460 0%, #6a6460 20%, transparent 75%);
