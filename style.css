@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Jost:wght@200;300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500&family=Cormorant+Garamond:ital,wght@1,300&family=Jost:wght@200;300;400&display=swap');
 
 * {
   margin: 0;
@@ -71,7 +71,7 @@ nav {
 }
 
 .home-header h1 {
-  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-family: 'Shippori Mincho', serif;
   font-size: clamp(2rem, 3.2vw, 3rem);
   font-weight: 300;
   letter-spacing: 0.25em;
@@ -151,7 +151,7 @@ nav {
 }
 
 .collection-header h1 {
-  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-family: 'Shippori Mincho', serif;
   font-size: clamp(1.4rem, 2.5vw, 2.2rem);
   font-weight: 300;
   letter-spacing: 0.25em;
