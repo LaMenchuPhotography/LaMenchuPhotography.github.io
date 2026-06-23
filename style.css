@@ -286,6 +286,27 @@ nav {
   border-color: #7a7570;
 }
 
+.about-portraits {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 3rem 0;
+}
+
+.about-portrait {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+  filter: brightness(0.9);
+  transition: filter 0.3s ease;
+}
+
+.about-portrait:hover {
+  filter: brightness(1);
+}
+
 /* ── Footer ── */
 footer {
   padding: 2rem 3rem;
