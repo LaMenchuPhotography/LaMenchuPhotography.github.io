@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500&family=Cormorant+Garamond:ital,wght@1,300&family=Jost:wght@200;300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500&family=Cormorant+Garamond:ital,wght@1,300&display=swap');
 
 * {
   margin: 0;
@@ -9,8 +9,8 @@
 body {
   background-color: #141414;
   color: #d4cfc9;
-  font-family: 'Shippori Mincho', serif;: 'Shippori Mincho', serif;ly: 'Shippori Mincho', serif;
-  font-weight: 300;
+  font-family: 'Shippori Mincho', serif;
+  font-weight: 400;
 }
 
 /* ── Navigation ── */
@@ -34,9 +34,7 @@ nav {
 .nav-info {
   text-decoration: none;
   color: #7a7570;
-  font-size: 1.1rem;
-  font-family: 'Shippori Mincho', serif;
-  font-weight: 200;
+  font-size: 1rem;
   width: 28px;
   height: 28px;
   border: 1px solid #3a3530;
@@ -52,7 +50,6 @@ nav {
   color: #d4cfc9;
   border-color: #7a7570;
 }
-
 
 /* ── Home page ── */
 .home-wrapper {
@@ -71,9 +68,8 @@ nav {
 }
 
 .home-header h1 {
-  font-family: 'Shippori Mincho', serif;
   font-size: clamp(2rem, 3.2vw, 3rem);
-  font-weight: 300;
+  font-weight: 400;
   letter-spacing: 0.25em;
   text-transform: uppercase;
   color: #e8e3dc;
@@ -81,7 +77,7 @@ nav {
 
 .home-header p {
   margin-top: 0.6rem;
-  font-family: 'Cormorant Garamond', Georgia, serif
+  font-family: 'Cormorant Garamond', Georgia, serif;
   font-style: italic;
   font-size: clamp(1.4rem, 2vw, 1.6rem);
   letter-spacing: 0.15em;
@@ -128,9 +124,8 @@ nav {
   position: absolute;
   bottom: 3rem;
   left: 3rem;
-  font-family: 'Shippori Mincho', serif;
   font-size: clamp(1.4rem, 2.5vw, 2.2rem);
-  font-weight: 300;
+  font-weight: 400;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: #e8e3dc;
@@ -151,9 +146,8 @@ nav {
 }
 
 .collection-header h1 {
-  font-family: 'Shippori Mincho', serif;
   font-size: clamp(1.4rem, 2.5vw, 2.2rem);
-  font-weight: 300;
+  font-weight: 400;
   letter-spacing: 0.25em;
   text-transform: uppercase;
   color: #e8e3dc;
@@ -162,7 +156,7 @@ nav {
 .back-link {
   display: inline-block;
   margin-top: 1rem;
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: #5a5550;
@@ -174,7 +168,7 @@ nav {
   color: #d4cfc9;
 }
 
-/* ── Gallery grid ── */
+/* ── Gallery ── */
 .gallery {
   columns: 3;
   column-gap: 3px;
@@ -188,7 +182,6 @@ nav {
   break-inside: avoid;
   cursor: pointer;
   filter: brightness(0.92);
-  transition: filter 0.3s ease;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
   transform: translateY(0);
   transition: filter 0.3s ease, transform 0.4s ease, box-shadow 0.4s ease;
@@ -230,9 +223,6 @@ nav {
   font-size: 1.5rem;
   color: #7a7570;
   cursor: pointer;
-  font-weight: 200;
-  font-family: 'Shippori Mincho', serif;
-  letter-spacing: 0.05em;
   transition: color 0.3s ease;
 }
 
@@ -248,9 +238,8 @@ nav {
 }
 
 .about-page h1 {
-  font-family: 'Shippori Mincho', serif;
   font-size: 1.8rem;
-  font-weight: 300;
+  font-weight: 400;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: #e8e3dc;
@@ -258,9 +247,8 @@ nav {
 }
 
 .about-page h2 {
-  font-family: 'Shippori Mincho', serif;
-  font-size: 1.1rem;
-  font-weight: 300;
+  font-size: 1rem;
+  font-weight: 400;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: #7a7570;
@@ -269,7 +257,7 @@ nav {
 }
 
 .about-page p {
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   line-height: 1.9;
   color: #9a9590;
   letter-spacing: 0.03em;
@@ -311,7 +299,7 @@ nav {
 footer {
   padding: 2rem 3rem;
   text-align: center;
-  font-size: 0.65rem;
+  font-size: 0.7rem;
   letter-spacing: 0.2em;
   color: #3a3530;
   text-transform: uppercase;
@@ -329,7 +317,7 @@ footer {
   }
 
   .gallery {
-    grid-template-columns: repeat(2, 1fr);
+    columns: 2;
   }
 
   nav {
@@ -339,6 +327,6 @@ footer {
 
 @media (max-width: 480px) {
   .gallery {
-    grid-template-columns: 1fr;
+    columns: 1;
   }
 }
