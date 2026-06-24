@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500&family=Cormorant+Garamond:ital,wght@1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Jost:wght@200;300;400&display=swap');
 
 * {
   margin: 0;
@@ -7,10 +7,10 @@
 }
 
 body {
-  background-color: #141414;
+  background-color: #000;
   color: #d4cfc9;
-  font-family: 'Shippori Mincho', serif;
-  font-weight: 400;
+  font-family: 'Jost', -apple-system, 'Avenir Next', 'Avenir', sans-serif;
+  font-weight: 300;
 }
 
 /* ── Navigation ── */
@@ -28,18 +28,12 @@ nav {
 
 .nav-info,
 .nav-etsy {
-
-.nav-icons {
-  display: flex;
-  gap: 0.6rem;
-  align-items: center;
-}
-
-.nav-camera,
-.nav-info {
   text-decoration: none;
   color: #7a7570;
-  font-size: 1rem;
+  font-size: 1.1rem;
+  font-family: 'Jost', sans-serif;
+  font-weight: 200;
+  letter-spacing: 0.05em;
   width: 28px;
   height: 28px;
   border: 1px solid #3a3530;
@@ -50,33 +44,28 @@ nav {
   transition: color 0.3s ease, border-color 0.3s ease;
 }
 
-.nav-camera:hover,
-.nav-info:hover {
+.nav-info:hover,
+.nav-etsy:hover {
   color: #d4cfc9;
   border-color: #7a7570;
-.nav-etsy:hover 
 }
-
 
 /* ── Home page ── */
-.home-wrapper {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  padding-top: 5rem;
-}
-
 .home-header {
-  flex-shrink: 0;
-  background-color: #141414;
-  padding: 2rem 0 1.5rem;
-  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   z-index: 100;
+  padding: 3.5rem 0 0;
+  text-align: center;
+  pointer-events: none;
 }
 
 .home-header h1 {
-  font-size: clamp(2rem, 3.2vw, 3rem);
-  font-weight: 400;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(1.6rem, 3vw, 2.8rem);
+  font-weight: 300;
   letter-spacing: 0.25em;
   text-transform: uppercase;
   color: #e8e3dc;
@@ -86,24 +75,16 @@ nav {
   margin-top: 0.6rem;
   font-family: 'Cormorant Garamond', Georgia, serif;
   font-style: italic;
-  font-size: clamp(1.4rem, 2vw, 1.6rem);
+  font-size: clamp(0.8rem, 1.2vw, 1rem);
   letter-spacing: 0.15em;
-  color: #a09a93;
-}
-
-.home-divider {
-  display: block;
-  width: 680px;
-  height: 1px;
-  margin: 0.8rem auto;
-  background: radial-gradient(ellipse at center, #6a6460 0%, #6a6460 20%, transparent 75%);
+  color: #5a5550;
 }
 
 /* ── Home collections grid ── */
 .home-collections {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  flex: 1;
+  height: 100vh;
 }
 
 .collection-link {
@@ -131,8 +112,9 @@ nav {
   position: absolute;
   bottom: 3rem;
   left: 3rem;
+  font-family: 'Cormorant Garamond', Georgia, serif;
   font-size: clamp(1.4rem, 2.5vw, 2.2rem);
-  font-weight: 400;
+  font-weight: 300;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: #e8e3dc;
@@ -153,8 +135,9 @@ nav {
 }
 
 .collection-header h1 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
   font-size: clamp(1.4rem, 2.5vw, 2.2rem);
-  font-weight: 400;
+  font-weight: 300;
   letter-spacing: 0.25em;
   text-transform: uppercase;
   color: #e8e3dc;
@@ -163,7 +146,7 @@ nav {
 .back-link {
   display: inline-block;
   margin-top: 1rem;
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: #5a5550;
@@ -175,35 +158,27 @@ nav {
   color: #d4cfc9;
 }
 
-/* ── Gallery ── */
+/* ── Gallery grid ── */
 .gallery {
-  columns: 3;
-  column-gap: 3px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3px;
   padding: 3px;
+  background-color: #000;
 }
 
 .gallery img {
   width: 100%;
+  aspect-ratio: 2/3;
+  object-fit: cover;
   display: block;
-  margin-bottom: 3px;
-  break-inside: avoid;
   cursor: pointer;
   filter: brightness(0.92);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
-  opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 0.6s ease, transform 0.6s ease, filter 0.3s ease, box-shadow 0.4s ease;
-}
-
-.gallery img.visible {
-  opacity: 1;
-  transform: translateY(0);
+  transition: filter 0.3s ease;
 }
 
 .gallery img:hover {
   filter: brightness(1);
-  transform: translateY(-4px);
-  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.8);
 }
 
 /* ── Lightbox ── */
@@ -236,6 +211,9 @@ nav {
   font-size: 1.5rem;
   color: #7a7570;
   cursor: pointer;
+  font-weight: 200;
+  font-family: 'Jost', sans-serif;
+  letter-spacing: 0.05em;
   transition: color 0.3s ease;
 }
 
@@ -248,12 +226,12 @@ nav {
   max-width: 680px;
   margin: 0 auto;
   padding: 8rem 2rem 6rem;
-  overflow: hidden;
 }
 
 .about-page h1 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
   font-size: 1.8rem;
-  font-weight: 400;
+  font-weight: 300;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: #e8e3dc;
@@ -261,8 +239,9 @@ nav {
 }
 
 .about-page h2 {
-  font-size: 1rem;
-  font-weight: 400;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.1rem;
+  font-weight: 300;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: #7a7570;
@@ -271,7 +250,7 @@ nav {
 }
 
 .about-page p {
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   line-height: 1.9;
   color: #9a9590;
   letter-spacing: 0.03em;
@@ -288,35 +267,11 @@ nav {
   border-color: #7a7570;
 }
 
-.about-portrait-wrapper {
-  float: right;
-  width: 260px;
-  height: 260px;
-  border-radius: 50%;
-  overflow: hidden;
-  margin: 0 0 2rem 3rem;
-}
-
-.about-portrait-wrapper img {
-  width: 140%;
-  height: 140%;
-  object-fit: cover;
-  object-position: center 75%;
-  margin-left: -20%;
-  margin-top: -5%;
-  filter: brightness(0.9);
-  transition: filter 0.3s ease;
-}
-
-.about-portrait-wrapper:hover img {
-  filter: brightness(1);
-}
-
 /* ── Footer ── */
 footer {
   padding: 2rem 3rem;
   text-align: center;
-  font-size: 0.7rem;
+  font-size: 0.65rem;
   letter-spacing: 0.2em;
   color: #3a3530;
   text-transform: uppercase;
@@ -334,7 +289,7 @@ footer {
   }
 
   .gallery {
-    columns: 2;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   nav {
@@ -344,6 +299,6 @@ footer {
 
 @media (max-width: 480px) {
   .gallery {
-    columns: 1;
+    grid-template-columns: 1fr;
   }
 }
