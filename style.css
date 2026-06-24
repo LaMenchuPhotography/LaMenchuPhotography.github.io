@@ -51,15 +51,18 @@ nav {
 }
 
 /* ── Home page ── */
+.home-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding-top: 5rem;
+}
+
 .home-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 100;
-  padding: 3.5rem 0 0;
+  flex-shrink: 0;
   text-align: center;
-  pointer-events: none;
+  padding: 1.5rem 0 1rem;
+  background-color: #000;
 }
 
 .home-header h1 {
@@ -69,6 +72,15 @@ nav {
   letter-spacing: 0.25em;
   text-transform: uppercase;
   color: #e8e3dc;
+}
+
+.home-divider {
+  display: block;
+  width: 480px;
+  max-width: 80vw;
+  height: 1px;
+  margin: 0.7rem auto 0;
+  background: radial-gradient(ellipse at center, #3a3530 0%, #3a3530 30%, transparent 75%);
 }
 
 .home-header p {
@@ -82,9 +94,9 @@ nav {
 
 /* ── Home collections grid ── */
 .home-collections {
+  flex: 1;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  height: 100vh;
 }
 
 .collection-link {
@@ -158,27 +170,35 @@ nav {
   color: #d4cfc9;
 }
 
-/* ── Gallery grid ── */
+/* ── Gallery ── */
 .gallery {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 3px;
+  columns: 3;
+  column-gap: 3px;
   padding: 3px;
-  background-color: #000;
 }
 
 .gallery img {
   width: 100%;
-  aspect-ratio: 2/3;
-  object-fit: cover;
   display: block;
+  margin-bottom: 3px;
+  break-inside: avoid;
   cursor: pointer;
   filter: brightness(0.92);
-  transition: filter 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease, filter 0.3s ease, box-shadow 0.4s ease;
+}
+
+.gallery img.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .gallery img:hover {
   filter: brightness(1);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.8);
 }
 
 /* ── Lightbox ── */
@@ -223,6 +243,9 @@ nav {
 
 /* ── About page ── */
 .about-page {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 8rem 2rem 6rem;
   overflow: hidden;
 }
 
@@ -311,7 +334,7 @@ footer {
   }
 
   .gallery {
-    grid-template-columns: repeat(2, 1fr);
+    columns: 2;
   }
 
   nav {
@@ -321,6 +344,6 @@ footer {
 
 @media (max-width: 480px) {
   .gallery {
-    grid-template-columns: 1fr;
+    columns: 1;
   }
 }
