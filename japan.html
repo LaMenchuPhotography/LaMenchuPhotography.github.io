@@ -90,5 +90,17 @@
     });
   </script>
 
+  <script>
+  const images = document.querySelectorAll('.gallery img');
+  images.forEach((img, index) => {
+    const show = () => setTimeout(() => img.classList.add('visible'), index * 60);
+    if (img.complete) {
+      show();
+    } else {
+      img.addEventListener('load', show);
+    }
+  });
+</script>
+
 </body>
 </html>
